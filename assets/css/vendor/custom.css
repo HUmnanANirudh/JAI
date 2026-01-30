@@ -1,0 +1,242 @@
+/* 
+    Jamnagar Agro Industries (JAI) - Custom Styles 
+    Architecture: Design Tokens -> Utilities -> Components -> Layout
+*/
+
+/* -------------------------------------------------------------------------
+   1. Design Tokens (CSS Variables)
+   ------------------------------------------------------------------------- */
+:root {
+    /* Brand Colors */
+    --jai-color-primary: #008A0E;       /* Agro Green */
+    --jai-color-secondary: #E31E24;     /* Accent Red */
+    --jai-color-text-main: #212529;     /* Dark Grey for text */
+    --jai-color-text-light: #6c757d;    /* Muted Grey */
+    --jai-color-bg-light: #f8f9fa;      /* Light Background */
+    --jai-color-white: #ffffff;
+
+    /* Typography */
+    --jai-font-family-base: 'Manrope', sans-serif;
+    --jai-font-weight-bold: 700;
+    --jai-font-weight-normal: 400;
+
+    /* Spacing & Sizing */
+    --jai-spacing-xs: 0.5rem;
+    --jai-spacing-sm: 1rem;
+    --jai-spacing-md: 2rem;
+    --jai-spacing-lg: 4rem;
+    --jai-spacing-xl: 8rem;
+    
+    --jai-border-radius: 8px;
+    --jai-transition: all 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------
+   2. Base / Resets
+   ------------------------------------------------------------------------- */
+body {
+    font-family: var(--jai-font-family-base);
+    color: var(--jai-color-text-main);
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+a {
+    text-decoration: none;
+    transition: var(--jai-transition);
+}
+
+a:hover {
+    color: var(--jai-color-secondary);
+}
+
+/* -------------------------------------------------------------------------
+   3. Utility Classes (Helpers)
+   ------------------------------------------------------------------------- */
+.jai-text-primary { color: var(--jai-color-primary) !important; }
+.jai-text-secondary { color: var(--jai-color-secondary) !important; }
+
+.jai-bg-light { background-color: var(--jai-color-bg-light) !important; }
+
+.jai-section {
+    padding: var(--jai-spacing-lg) 0;
+}
+
+@media (max-width: 768px) {
+    .jai-section {
+        padding: var(--jai-spacing-md) 0;
+    }
+}
+
+/* -------------------------------------------------------------------------
+   4. Components (BEM Methodology)
+   ------------------------------------------------------------------------- */
+
+/* Header & Navigation */
+.jai-nav-link {
+    font-weight: var(--jai-font-weight-bold);
+    color: var(--jai-color-text-main) !important;
+    padding: var(--jai-spacing-xs) var(--jai-spacing-sm);
+}
+
+.jai-nav-link:hover {
+    color: var(--jai-color-primary) !important;
+}
+
+/* Buttons */
+.jai-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--jai-color-primary);
+    color: var(--jai-color-white);
+    border-radius: var(--jai-border-radius);
+    font-weight: 600;
+    border: 2px solid var(--jai-color-primary);
+}
+
+.jai-btn:hover {
+    background-color: transparent;
+    color: var(--jai-color-primary);
+}
+
+.jai-btn--secondary {
+    background-color: var(--jai-color-secondary);
+    border-color: var(--jai-color-secondary);
+}
+
+.jai-btn--secondary:hover {
+    color: var(--jai-color-secondary);
+}
+
+/* Cards (Products/Services) */
+.jai-card {
+    background: var(--jai-color-white);
+    border-radius: var(--jai-border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--jai-transition);
+    height: 100%;
+    margin-bottom: var(--jai-spacing-md);
+}
+
+.jai-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.jai-card__image-wrapper {
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+}
+
+.jai-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jai-card__content {
+    padding: var(--jai-spacing-sm);
+}
+
+.jai-card__title {
+    font-size: 1.25rem;
+    margin-bottom: var(--jai-spacing-xs);
+    font-weight: var(--jai-font-weight-bold);
+}
+
+.jai-card__text {
+    color: var(--jai-color-text-light);
+    font-size: 0.95rem;
+}
+
+/* Timeline */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.timeline-list li {
+    padding-left: 20px;
+    border-left: 3px solid var(--jai-color-primary);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--jai-color-primary);
+    border: 3px solid var(--jai-color-white);
+}
+
+/* Footer */
+.jai-footer {
+    background-color: #1a1a1a;
+    color: #ababab;
+    padding-top: var(--jai-spacing-lg);
+}
+
+.jai-footer__title {
+    color: var(--jai-color-white);
+    margin-bottom: var(--jai-spacing-sm);
+}
+
+.jai-footer__link {
+    color: #ababab;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.jai-footer__link:hover {
+    color: var(--jai-color-primary);
+    padding-left: 5px;
+}
+
+/* -------------------------------------------------------------------------
+   5. Responsive Fixes
+   ------------------------------------------------------------------------- */
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix mobile menu padding */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--jai-color-white);
+        padding: var(--jai-spacing-sm);
+        border-radius: var(--jai-border-radius);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* Shop Grid Responsiveness */
+@media (max-width: 991px) {
+    .vt-products.columns-4 .product {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .vt-products.columns-4 .product {
+        width: 100%;
+    }
+}
+
+/* Timeline Responsiveness */
+@media (max-width: 768px) {
+    .timeline-list li {
+        margin-bottom: 2rem;
+    }
+}

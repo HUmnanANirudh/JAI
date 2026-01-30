@@ -1,0 +1,5 @@
+/* Custom Reset / Base overrides */
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,109 @@
+/* Client Marquee */
+.client-marquee {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-forest);
+    padding: var(--space-md) 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+/* Inline Marquee Modifier (For use inside page sections) */
+.client-marquee.marquee-inline {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+    margin-top: var(--space-md);
+    z-index: 1;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    will-change: transform;
+}
+
+.client-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.client-logo-item {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 80px;
+    padding: 1rem;
+    background-color: var(--color-cream);
+    border-radius: var(--radius-card);
+    border-color: transparent;
+    margin: 0 var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Variant for Cream background sections */
+.bg-cream .client-logo-item {
+    background-color: var(--color-white);
+}
+
+
+.client-logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: none;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .client-logo-item {
+        width: 120px;
+        height: 60px;
+        margin: 0 0.5rem;
+    }
+    
+    .client-marquee {
+        padding: 1rem 0;
+    }
+}
+
+/* Accordion */
+.accordion-editorial .accordion-item {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-forest);
+}
+
+.accordion-editorial .accordion-button {
+    background: transparent;
+    color: var(--color-forest);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    box-shadow: none;
+}
+
+.accordion-editorial .accordion-button::after {
+    filter: brightness(0);
+}
+
+.accordion-editorial .accordion-body {
+    padding: 0 0 1.5rem 0;
+    color: var(--color-forest);
+    opacity: 0.8;
+}

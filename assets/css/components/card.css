@@ -1,0 +1,87 @@
+/* High-End Cards with Container Queries */
+
+/* Enable container queries on the card wrapper/component if needed, 
+   but ideally this is inherited from a parent container like .grid-auto-fit */
+.card-editorial {
+    background-color: var(--color-cream);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-float);
+    transition: transform 0.5s var(--ease-editorial);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-editorial:hover {
+    transform: translateY(-10px);
+}
+
+.card-image-container {
+    /* Responsive height based on container width */
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s var(--ease-editorial);
+}
+
+.card-editorial:hover .card-image-container img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    /* Fluid padding based on container size (cqi) */
+    padding: clamp(1.5rem, 5cqi, 3rem);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: inherit;
+}
+
+.card-title {
+    font-family: var(--font-display);
+    /* Fluid font size based on container size */
+    font-size: clamp(2rem, 10cqi, 3.5rem);
+    color: inherit;
+    margin-bottom: 0.5rem;
+    line-height: 0.9;
+}
+
+.card-meta {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: clamp(0.7rem, 2cqi, 0.85rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+/* Container Query Example: 
+   If the card is in a wide container (e.g. single column layout),
+   switch to horizontal layout */
+@container (min-width: 600px) {
+    .card-editorial.card-adaptive {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .card-editorial.card-adaptive .card-image-container {
+        width: 50%;
+        height: auto;
+        border-radius: var(--radius-card) 0 0 var(--radius-card);
+    }
+    
+    .card-editorial.card-adaptive .card-content {
+        width: 50%;
+    }
+}

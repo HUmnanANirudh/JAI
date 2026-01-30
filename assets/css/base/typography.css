@@ -1,0 +1,96 @@
+/* Typography & Design Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --color-forest: #01472e;
+    --color-sage: #ccd5ae;
+    --color-olive: #e9edc9;
+    --color-cream: #fefae0;
+    --color-moss: #a3b18a;
+
+    /* Typography */
+    --font-display: 'Anton', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Fluid Typography Scale (Reduced sizes) */
+    --font-size-sm: clamp(0.75rem, 0.15vw + 0.7rem, 0.85rem);
+    --font-size-base: clamp(0.95rem, 0.3vw + 0.9rem, 1.1rem);
+    --font-size-md: clamp(1.1rem, 0.5vw + 1rem, 1.35rem);
+    --font-size-lg: clamp(1.35rem, 0.8vw + 1.2rem, 1.75rem);
+    --font-size-xl: clamp(1.75rem, 1.2vw + 1.5rem, 2.25rem);
+    --font-size-2xl: clamp(2.2rem, 2vw + 1.8rem, 3rem);
+    
+    /* Display Sizes (Reduced) */
+    --font-size-hero: clamp(3.5rem, 15vw + 1rem, 18rem);
+    --font-size-section: clamp(2.5rem, 10vw + 1rem, 10rem);
+
+    /* Spacing */
+    --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+    --space-sm: clamp(1rem, 2vw, 1.5rem);
+    --space-md: clamp(2rem, 4vw, 3rem);
+    --space-lg: clamp(4rem, 8vw, 6rem);
+    --space-xl: clamp(6rem, 12vw, 10rem);
+
+    /* Radii */
+    --radius-section: 5rem;
+    --radius-card: 2.5rem;
+    --radius-pill: 9999px;
+
+    /* Shadows */
+    --shadow-float: 0 25px 50px -12px rgba(1, 71, 46, 0.2);
+    
+    /* Animation */
+    --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-reveal: 1.2s;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    background-color: var(--color-cream);
+    color: var(--color-forest);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--space-sm);
+}
+
+/* Hero Typography */
+.text-hero {
+    font-size: var(--font-size-hero);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: var(--color-forest);
+    display: block;
+    word-spacing: 100vw;
+}
+
+/* Section Titles */
+.text-section-title {
+    font-size: var(--font-size-section);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+/* Utility Labels */
+.text-label {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: var(--font-size-sm);
+}
+
+p.lead {
+    font-size: var(--font-size-md);
+    font-weight: 400;
+    line-height: 1.5;
+}

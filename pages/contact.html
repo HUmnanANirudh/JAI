@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jamnagar Agro Industries</title>
+    <link href="../assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/vendor/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <header class="navbar-fixed reveal-trigger delay-3">
+        <a href="../index.html" class="logo-brand">Jamnagar Agro</a>
+        <nav class="nav-pill">
+            <a href="../index.html" class="nav-link-pill">Home</a>
+            <a href="about.html" class="nav-link-pill">Story</a>
+            <a href="products.html" class="nav-link-pill">Goods</a>
+            <a href="services.html" class="nav-link-pill">Services</a>
+        </nav>
+        <div style="width: 140px; display: none; @media(min-width: 768px){display:block;}"></div> 
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-cream d-flex flex-column justify-content-center position-relative overflow-hidden" style="min-height: 70vh; padding-top: 8rem;">
+            <!-- Decorative Shapes -->
+            <img src="../assets/images/shape/leaf-3.png" class="shape-deco" alt="" style="top: 20%; right: -8%; width: 22vw; transform: rotate(10deg);">
+            <img src="../assets/images/shape/4.png" class="shape-deco" alt="" style="bottom: 5%; left: -2%; width: 18vw; opacity: 0.05;">
+
+            <div class="container-fluid px-4 px-md-5 position-relative" style="z-index: 2;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex align-items-center mb-4 reveal-trigger delay-1">
+                            <img src="../assets/images/favicon.png" alt="Logo Mark" style="height: 40px; margin-right: 1rem;">
+                            <span class="text-label text-forest">Get in Touch</span>
+                        </div>
+                        <h1 class="text-hero reveal-trigger">CONTACT</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="section-rounded-top bg-sage">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5 reveal-trigger">
+                        <h3 class="display-4 text-forest mb-5" style="font-family: var(--font-display);">Let's Start a<br>Conversation</h3>
+                        
+                        <div class="mb-5">
+                            <span class="text-label text-forest d-block mb-2">Headquarters</span>
+                            <p class="lead text-forest">
+                                Plot No. 114, Happa,<br>
+                                Jamnagar – 361120,<br>
+                                Gujarat, India
+                            </p>
+                        </div>
+
+                        <div class="mb-5">
+                            <span class="text-label text-forest d-block mb-2">Reach Us</span>
+                            <p class="lead text-forest mb-1">+91 92654 00092</p>
+                            <a href="mailto:info@jamnagaragroindustries.com" class="lead text-forest text-decoration-underline">info@jamnagaragroindustries.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 offset-lg-1 reveal-trigger delay-1">
+                        <form action="../assets/mail/contact.php" method="POST" class="p-4 p-md-5 bg-cream shadow-float" style="border-radius: var(--radius-card);">
+                            <div class="mb-4">
+                                <label for="name" class="text-label text-forest mb-2">Name</label>
+                                <input type="text" class="form-control p-3 bg-transparent border-forest" id="name" name="name" style="border-radius: 0; border: none; border-bottom: 2px solid var(--color-forest);" placeholder="Your Name">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="text-label text-forest mb-2">Email</label>
+                                <input type="email" class="form-control p-3 bg-transparent border-forest" id="email" name="email" style="border-radius: 0; border: none; border-bottom: 2px solid var(--color-forest);" placeholder="Your Email">
+                            </div>
+                            <div class="mb-5">
+                                <label for="message" class="text-label text-forest mb-2">Message</label>
+                                <textarea class="form-control p-3 bg-transparent border-forest" id="message" name="message" rows="4" style="border-radius: 0; border: none; border-bottom: 2px solid var(--color-forest);" placeholder="Tell us about your needs"></textarea>
+                            </div>
+                            <button type="submit" class="btn-editorial w-100 border-0">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (New) -->
+        <section class="section-rounded-top bg-cream py-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="text-section-title text-forest reveal-trigger">FAQ</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 reveal-trigger delay-1">
+                        <div class="accordion accordion-editorial" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        Do you export internationally?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, we supply to merchant exporters who ship our premium commodities to global markets. We ensure all products meet international quality standards.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        What is the minimum order quantity?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        For wholesale bulk orders, our standard packaging is 30 kg bags. Please contact our sales team for specific MOQ details based on the commodity.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        Do you offer white labeling?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Absolutely. We provide end-to-end white-label manufacturing services, handling everything from sourcing and processing to packaging under your brand name.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regional Presence (New) -->
+        <section class="section-rounded-top bg-forest py-section">
+            <div class="container">
+                <div class="row mb-5 text-center">
+                    <div class="col-12">
+                        <h2 class="text-section-title text-cream reveal-trigger">OUR REACH</h2>
+                    </div>
+                </div>
+                <div class="grid-auto-fit card-grid-wrapper text-center">
+                    <div class="reveal-trigger delay-1">
+                        <h3 class="display-3 text-cream mb-0" style="font-family: var(--font-display);">8</h3>
+                        <span class="text-label text-sage">States</span>
+                    </div>
+                    <div class="reveal-trigger delay-2">
+                        <h3 class="display-3 text-cream mb-0" style="font-family: var(--font-display);">40+</h3>
+                        <span class="text-label text-sage">Cities</span>
+                    </div>
+                    <div class="reveal-trigger delay-3">
+                        <h3 class="display-3 text-cream mb-0" style="font-family: var(--font-display);">100+</h3>
+                        <span class="text-label text-sage">Clients</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps to Partner (New) -->
+        <section class="section-rounded-top bg-olive py-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="text-section-title text-forest reveal-trigger">PARTNER</h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4 reveal-trigger delay-1">
+                        <h4 class="text-forest mb-3">01. Inquire</h4>
+                        <p class="text-forest">Fill out our contact form or give us a call to discuss your needs.</p>
+                    </div>
+                    <div class="col-md-4 reveal-trigger delay-2">
+                        <h4 class="text-forest mb-3">02. Consult</h4>
+                        <p class="text-forest">Our experts will work with you to tailor solutions for your business.</p>
+                    </div>
+                    <div class="col-md-4 reveal-trigger delay-3">
+                        <h4 class="text-forest mb-3">03. Collaborate</h4>
+                        <p class="text-forest">Begin a lasting partnership built on quality, reliability, and trust.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Brochure CTA (New) -->
+        <section class="section-rounded-top bg-cream py-section text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 reveal-trigger">
+                        <h2 class="display-1 text-forest mb-5" style="font-family: var(--font-display);">DOWNLOAD<br>BROCHURE</h2>
+                        <p class="lead text-forest">
+                            Discover our full product range and comprehensive services in our latest company brochure.
+                        </p>
+                        <a href="#" class="btn-editorial">Get Brochure</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="jai-footer">
+        <div class="container">
+            <span class="footer-brand">Jamnagar Agro</span>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <span class="footer-nav-label">Navigation</span>
+                    <a href="../index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">Our Story</a>
+                    <a href="products.html" class="footer-link">Products</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <span class="footer-nav-label">Products</span>
+                    <a href="products.html" class="footer-link">Cumin & Spices</a>
+                    <a href="products.html" class="footer-link">Retail Brands</a>
+                    <a href="products.html" class="footer-link">Wholesale Supplies</a>
+                    <a href="products.html" class="footer-link">Export Quality</a>
+                </div>
+                
+                <div class="col-md-4">
+                    <span class="footer-nav-label">Contact</span>
+                    <p class="footer-address">
+                        Plot No. 114, Happa,<br>
+                        Jamnagar – 361120,<br>
+                        Gujarat, India
+                    </p>
+                    <a href="tel:+919265400092" class="footer-link">+91 92654 00092</a>
+                    <a href="mailto:info@jamnagaragroindustries.com" class="footer-link">info@jamnagaragroindustries.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Jamnagar Agro Industries Ltd.</p>
+                <div class="d-flex gap-4">
+                    <a href="#" class="footer-copyright text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="footer-copyright text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('is-visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-trigger').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

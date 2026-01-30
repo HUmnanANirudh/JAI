@@ -1,0 +1,75 @@
+/* Navbar Styles */
+.navbar-fixed {
+    position: fixed;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.logo-brand {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-forest);
+    font-size: 1.5rem;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.logo-brand::before {
+    content: '- ';
+}
+
+.nav-pill {
+    background-color: var(--color-forest);
+    border-radius: var(--radius-pill);
+    padding: 1rem 2.5rem;
+    display: flex;
+    gap: 2rem;
+    pointer-events: auto;
+    box-shadow: var(--shadow-float);
+}
+
+.nav-link-pill {
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link-pill:hover {
+    color: var(--color-sage);
+}
+
+@media (max-width: 768px) {
+    .navbar-fixed {
+        flex-direction: column;
+        top: 1rem;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .logo-brand {
+        display: none; /* Hide logo on mobile scroll to save space, or keep it */
+    }
+    .nav-pill {
+        padding: 0.75rem 1.5rem;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-link-pill {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+    }
+}

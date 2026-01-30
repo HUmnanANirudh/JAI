@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Jamnagar Agro Industries</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link href="assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/vendor/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Fixed Navigation -->
+    <header class="navbar-fixed reveal-trigger delay-3">
+        <a href="index.html" class="logo-brand">Jamnagar Agro</a>
+        <nav class="nav-pill">
+            <a href="index.html" class="nav-link-pill">Home</a>
+            <a href="pages/about.html" class="nav-link-pill">Story</a>
+            <a href="pages/products.html" class="nav-link-pill">Goods</a>
+            <a href="pages/contact.html" class="nav-link-pill">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-forest d-flex flex-column justify-content-center align-items-center text-center position-relative overflow-hidden" style="min-height: 100vh;">
+            <!-- Decorative Shapes -->
+            <img src="assets/images/shape/leaf.png" class="shape-deco" alt="" style="bottom: -5%; right: -5%; width: 30vw; opacity: 0.1; transform: rotate(-15deg);">
+            <img src="assets/images/shape/1.png" class="shape-deco" alt="" style="top: 10%; left: -5%; width: 20vw; opacity: 0.05;">
+
+            <div class="container position-relative" style="z-index: 2;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="reveal-trigger">
+                            <span class="text-label text-sage mb-3 d-block">Error 404</span>
+                            <h1 class="text-hero text-cream" style="font-size: 20vw; line-height: 0.8;">LOST?</h1>
+                        </div>
+                        <h2 class="text-sage reveal-trigger delay-1" style="font-family: var(--font-display); font-size: 3rem; margin-top: -2rem;">Page Not Found</h2>
+                        <p class="lead text-cream mt-4 reveal-trigger delay-2" style="opacity: 0.8;">
+                            The page you are looking for might have been removed or is temporarily unavailable.
+                        </p>
+                        <div class="mt-5 reveal-trigger delay-3">
+                            <a href="index.html" class="btn-editorial btn-light">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('is-visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-trigger').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
