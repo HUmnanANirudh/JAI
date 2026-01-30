@@ -1,12 +1,12 @@
 # Jamnagar Agro Industries Ltd. (JAI) - Corporate Website
 
-A editorial-style corporate website for Jamnagar Agro Industries Ltd., designed to reflect their 11+ years of excellence in the agricultural commodities sector. This project emphasizes a distinct brand identity through bold typography, earthy color palettes, and fluid user interactions.
+A editorial style corporate website for Jamnagar Agro Industries Ltd., designed to reflect their 11+ years of excellence in the agricultural commodities sector. This project emphasizes a distinct brand identity through bold typography and earthy color palettes.
 
 ![Design Preview](assets/images/logo.png)
 
-## Design Philosophy: "Earthy Editorial"
+## Design Philosophy: Earthy Editorial
 
-The design language moves away from traditional cluttered industrial websites to a modern, narrative-driven experience. It combines the raw and organic nature of agriculture with the precision of modern manufacturing.
+The design language moves away from traditional cluttered industrial websites to a modern narrative-driven experience. It combines the raw and organic nature of agriculture with the precision of modern manufacturing.
 
 ### Key Visual Concepts
 1.  **Vertical Stacking**: Content is organized into distinct "cards" or sections that stack vertically. Each section has deeply rounded top corners (`border-radius: 5rem`), creating a smooth, tactile feeling of layering as the user scrolls.
